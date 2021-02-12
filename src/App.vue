@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 *{
   margin: 0;
   padding: 0;
@@ -30,6 +30,9 @@ li{
 }
 a{
   text-decoration: none;
+}
+.clear{
+  clear: both;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

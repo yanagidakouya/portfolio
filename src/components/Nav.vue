@@ -18,9 +18,12 @@ export default {
 </script>
 
 <style scoped>
-nav{
-}
 li{
   float: left;
+}
+li a{
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff
 }
 </style>
