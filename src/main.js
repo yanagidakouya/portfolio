@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(fas, fab)
 // library.add(faGlobe,faBlog,faBirthdayCake,faImage,faTwitter,faGithub,faHtml5,faCss3Alt,faJsSquare)
 
+// sassのimport
+require('@/assets/sass/app.scss')
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
