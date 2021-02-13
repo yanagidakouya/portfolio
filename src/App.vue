@@ -1,18 +1,25 @@
 <template>
   <div id="app">
     <Header id="header"></Header>
+    <div class="contents_container">
+      <Leftside></Leftside>
+      <div id="contents"></div>
+    </div>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+// import 'normalize.css'
 import Header from './components/Header.vue'
+import Leftside from './components/Leftside.vue'
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
     Header,
+    Leftside,
   }
 }
 </script>
@@ -43,5 +50,8 @@ a{
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;  */
+}
+#app .contents_container{
+  display: flex;
 }
 </style>
