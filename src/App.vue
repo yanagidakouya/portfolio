@@ -3,7 +3,9 @@
     <Header id="header"></Header>
     <div class="contents_container">
       <Leftside></Leftside>
-      <div id="contents"></div>
+      <div id="contents">
+        <Visual></Visual>
+      </div>
     </div>
   </div>
 </template>
@@ -13,6 +15,7 @@
 // import 'normalize.css'
 import Header from './components/Header.vue'
 import Leftside from './components/Leftside.vue'
+import Visual from './components/Visual.vue'
 
 export default {
   name: 'App',
@@ -20,11 +23,12 @@ export default {
     // HelloWorld
     Header,
     Leftside,
+    Visual,
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 *{
   margin: 0;
   padding: 0;
@@ -50,8 +54,8 @@ a{
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;  */
-}
-#app .contents_container{
-  display: flex;
+  .contents_container{
+    display: flex;
+  }
 }
 </style>
