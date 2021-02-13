@@ -10,6 +10,9 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 // vue-particles
 import VueParticles from 'vue-particles'
 Vue.use(VueParticles)
+// vue-typer
+import VueTypePlugin from 'vue-typer'
+Vue.use(VueTypePlugin)
 // sassのimport
 require('@/assets/sass/app.scss')
 
