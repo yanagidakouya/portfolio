@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <h3 class="section-title"><span class="neon-sb">1. </span>About</h3>
+    <h3 class="section-title"><span class="neon-sb">5. </span>Contact</h3>
   </div>
 </template>
 

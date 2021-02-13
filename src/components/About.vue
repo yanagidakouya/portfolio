@@ -41,12 +41,6 @@ export default {
 
 <style lang="scss" scoped>
 .about{
-  padding-top: 30px;
-  text-align: center;
-  h3{
-    color: #fff;
-    font-size: 40px;
-  }
   table{
     color: rgb(213, 234, 247);
     margin: 0 auto;

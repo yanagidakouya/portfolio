@@ -96,6 +96,11 @@ a:visited{
   text-shadow: 0 0 1rem #138093, 0 0 6ch #a5eaf6, 0 0 1ch #77dff1, 0 0 1rem #5bdaf0;
 }
 
+.section-title{
+  color: #fff;
+  font-size: 40px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   margin: 0 auto;
@@ -118,12 +123,21 @@ a:visited{
       padding: 10%;
       width: 100%;
     }
+ 
     .position-second{
       z-index: 100;
       position: absolute;
       padding-top: 40%;
-      width: 100%;
+      width: 70%;
+      // 15% + 15% + 70% = 100%
+      margin: 0 15%;
+      text-align: center;
+      #about, #skills, #works, #blog, #contact{
+        padding: 40px 0;
+        border-bottom: solid 1px rgb(45, 45, 45)
+      }
     }
+    
   }
 
 }
