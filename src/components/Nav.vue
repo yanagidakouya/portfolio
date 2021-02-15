@@ -1,19 +1,30 @@
 <template>
   <nav>
     <ul>
-      <li><a href="#"><span class="neon-sb">1.</span>About</a></li>
-      <li><a href="#"><span class="neon-sb">2.</span>Skills</a></li>
-      <li><a href="#"><span class="neon-sb">3.</span>Works</a></li>
-      <li><a href="#"><span class="neon-sb">4.</span>Blog</a></li>
-      <li><a href="#"><span class="neon-sb">5.</span>Contact</a></li>
-      <li><a href="#"><span class="neon-sb">6.</span>Other</a></li>
+      <li><a href="#" @click="clickSmoothScroll('#about')"><span class="neon-sb">1.</span>About</a></li>
+      <li><a href="#" @click="clickSmoothScroll('#skills')"><span class="neon-sb">2.</span>Skills</a></li>
+      <li><a href="#" @click="clickSmoothScroll('#works')"><span class="neon-sb">3.</span>Works</a></li>
+      <li><a href="#" @click="clickSmoothScroll('#blog')"><span class="neon-sb">4.</span>Blog</a></li>
+      <li><a href="#" @click="clickSmoothScroll('#contact')"><span class="neon-sb">5.</span>Contact</a></li>
+      <li><a href="#" @click="clickSmoothScroll('#')"><span class="neon-sb">6.</span>Other</a></li>
     </ul>
   </nav>
 </template>
 
 <script>
 export default {
-  
+  methods: {
+    clickSmoothScroll (x){
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector(x),
+        500,
+        null,
+        null,
+        'y',
+      )
+    }
+  }
 }
 </script>
 

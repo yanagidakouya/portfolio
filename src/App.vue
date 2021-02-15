@@ -44,8 +44,9 @@ export default {
     Blog,
     Contact,
     Visual,
-  }
+  },
 }
+// <visual>の高さをwindowHeightに合わせる
 window.addEventListener('load', () => {
   let wh = window.innerHeight;
   let elem = document.getElementById('particles-js');

@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+// sassのimport
+// require('@/assets/sass/app.scss')
 // fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -13,8 +15,9 @@ Vue.use(VueParticles)
 // vue-typer
 import VueTypePlugin from 'vue-typer'
 Vue.use(VueTypePlugin)
-// sassのimport
-require('@/assets/sass/app.scss')
+// smoooth-scroll
+import smoothScroll from 'vue-smoothscroll'
+Vue.use(smoothScroll)
 
 Vue.config.productionTip = false
 
