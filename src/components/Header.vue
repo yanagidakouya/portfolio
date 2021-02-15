@@ -31,12 +31,9 @@ export default {
   .header-inner{
     width: 90%;
     margin: 0 auto;
+    text-align: center;
     .logo{
-      float: left;
       color: #fff;
-    }
-    .header-menu{
-      float: right;
     }
   }
 }

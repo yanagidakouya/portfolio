@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    <Header id="header"></Header>
     <div class="contents_container">
+    <Header id="header"></Header>
       <Leftside id="leftside"></Leftside>
       <div id="contents inner">
-        <div class="position-first">
+        <div class="position-ab">
           <Top id="top"></Top>
-        </div>
-        <div class="position-second">
           <About id="about"></About>
           <Skills id="skills"></Skills>
           <Works id="works"></Works>
           <Blog id="blog"></Blog>
           <Contact id="contact"></Contact>
         </div>
-        <Visual id="visual"></Visual>
+        <Visual id="particles-js"></Visual>
       </div>
     </div>
   </div>
@@ -48,6 +46,11 @@ export default {
     Visual,
   }
 }
+window.addEventListener('load', () => {
+  let wh = window.innerHeight;
+  let elem = document.getElementById('particles-js');
+  elem.style.height = wh + 'px';
+});
 </script>
 
 <style lang="scss">
@@ -88,6 +91,7 @@ a:visited{
 .vue-typer .custom.char{
   color: #cef5fc;
   text-shadow: 0 0 0.85rem #6cb8c6, 0 0 6ch #b7f0fa, 0 0 1ch #85e0f0, 0 0 0.85rem #71dcee;
+  word-break: normal;
 }
 
 .neon-sb{
@@ -99,6 +103,7 @@ a:visited{
 .section-title{
   color: #fff;
   font-size: 40px;
+  text-align: center;
 }
 
 #app {
@@ -110,31 +115,33 @@ a:visited{
   color: #2c3e50;
   margin-top: 60px;  */
   .contents_container{
-    display: flex;
-    align-self: auto;
-    padding-top: 50px;
-
-    #visual{
+    position: relative;
+    #particles-js{
       z-index: 10;
-    }
-    .position-first{
-      z-index: 100;
-      position: absolute;
-      padding: 10%;
       width: 100%;
+      position: fixed;
+      top: 0;
     }
- 
-    .position-second{
+    #header{
       z-index: 100;
+      position: fixed;
+    }
+    .position-ab{
+      z-index: 90;
       position: absolute;
-      padding-top: 40%;
+      padding-top: 10%;
       width: 70%;
       // 15% + 15% + 70% = 100%
       margin: 0 15%;
       text-align: center;
+      #top{
+        width: 100%;
+        padding-bottom: 50px;
+      }
       #about, #skills, #works, #blog, #contact{
-        padding: 40px 0;
-        border-bottom: solid 1px rgb(45, 45, 45)
+        padding: 10% 0;
+        border-bottom: solid 1px rgb(55, 55, 55);
+        width: 100%;
       }
     }
     

@@ -31,6 +31,6 @@ export default {
 <style lang="scss" scoped>
 .visual{
   margin: 0 calc(50% - 50vw);
-  background: #000;
+  background: rgba(0, 0, 0, 0);
 }
 </style>

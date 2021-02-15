@@ -1,7 +1,6 @@
 <template>
   <div class="about">
     <h3 class="section-title"><span class="neon-sb">1. </span>About</h3>
-    <p><img src="" alt=""></p>
     <table>
       <thead>
         <tr><th colspan="2">Profile</th>
@@ -22,7 +21,7 @@
         </tr>
         <tr>
           <td class="weight">Twitter</td>
-          <td><a href="https://twitter.com/TeRPayaujh6NNrn" target="blank">&#064;yanagida</a></td>
+          <td><a href="https://twitter.com/kouya_en" target="blank">&#064;kouya_en</a></td>
         </tr>
         <tr>
           <td class="weight">Mail</td>
@@ -40,15 +39,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../src/assets/sass/foundation/mixin';
 .about{
   table{
-    color: rgb(213, 234, 247);
-    margin: 0 auto;
+    color: #fff;
+    margin: 5% auto 0;
     line-height: 300%;
+    table-layout: fixed;
+    word-break: break-all;
+    word-wrap: break-all;
+    thead{
+      tr{
+        th{
+          font-size: 30px;
+        }
+      }
+    }
     tr{
       font-size: 20px;
+      @include mq-down(){
+        font-size: 14px;
+      }
       td{
         text-align: left;
+        a{
+          color: rgb(151, 207, 242);
+        }
       }
       .weight{
         font-weight: bold;

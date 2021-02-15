@@ -23,10 +23,14 @@
 
 <style lang="scss" scoped>
 .top{
+  text-align: left;
   h2{
-    font-size: 50px;
+    font-size: clamp(12px, 7.25vw, 80px);
     opacity: 0.9;
     padding-top: 20px;
+  }
+  p{
+    color: rgb(213, 234, 247);
   }
 }
 

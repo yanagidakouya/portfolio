@@ -18,14 +18,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../src/assets/sass/foundation/_mixin';
 nav{
   padding: 10px 0;
-  li{
-    float: left;
-    a{
-      display: inline-block;
-      padding: 5px 10px;
-      color: rgb(242, 242, 242);
+  ul{
+    display: flex;
+    justify-content: space-around;
+    li{
+      @include mq-down(){
+        width: calc(100% / 3);
+      }
+      a{
+        display: inline-block;
+        padding: 5px 10px;
+        color: rgb(242, 242, 242);
+        &:hover{
+          background: rgba(33, 33, 33, 0.8);
+        }
+      }
     }
   }
 }
