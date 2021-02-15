@@ -15,6 +15,7 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-particles": "^1.0.9",
+    "vue-smoothscroll": "^0.2.0",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
