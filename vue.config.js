@@ -7,5 +7,11 @@ module.exports = {
         @import "./src/assets/sass/foundation/mixin.scss";`
       }
     }
+  },
+  pages: {
+    index: {
+      entry: "src/main.js",
+      title: "Koya's Profile",
+    }
   }
 };
