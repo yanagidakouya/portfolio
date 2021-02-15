@@ -2,15 +2,17 @@
   <div id="app">
     <div class="contents_container">
     <Header id="header"></Header>
-      <Leftside id="leftside"></Leftside>
+    <Leftside id="leftside"></Leftside>
       <div id="contents inner">
-        <div class="position-ab">
+        <div class="p-absolute">
           <Top id="top"></Top>
-          <About id="about"></About>
-          <Skills id="skills"></Skills>
-          <Works id="works"></Works>
-          <Blog id="blog"></Blog>
-          <Contact id="contact"></Contact>
+          <div class="p-absolute-inner">
+            <About id="about"></About>
+            <Skills id="skills"></Skills>
+            <Works id="works"></Works>
+            <Blog id="blog"></Blog>
+            <Contact id="contact"></Contact>
+          </div>
         </div>
         <Visual id="particles-js"></Visual>
       </div>
@@ -103,7 +105,7 @@ a:visited{
 
 .section-title{
   color: #fff;
-  font-size: 40px;
+  font-size: clamp(26px, 5vw, 40px);
   text-align: center;
 }
 
@@ -123,26 +125,29 @@ a:visited{
       position: fixed;
       top: 0;
     }
-    #header{
+    #header, #leftside{
       z-index: 100;
       position: fixed;
     }
-    .position-ab{
+    .p-absolute{
       z-index: 90;
       position: absolute;
-      padding-top: 10%;
-      width: 70%;
+      width: 85%;
       // 15% + 15% + 70% = 100%
-      margin: 0 15%;
+      margin: 0 calc(15% / 2);
       text-align: center;
-      #top{
-        width: 100%;
-        padding-bottom: 50px;
-      }
-      #about, #skills, #works, #blog, #contact{
-        padding: 10% 0;
-        border-bottom: solid 1px rgb(55, 55, 55);
-        width: 100%;
+      &-inner{
+        background: rgb(213, 234, 247, 0.15);
+        margin: 0 calc(50% - 50vw);
+        #top{
+          width: 100%;
+          padding-bottom: 50px;
+        }
+        #about, #skills, #works, #blog, #contact{
+          padding: 10% 0;
+          border-bottom: solid 1px rgb(55, 55, 55);
+          width: 100%;
+        }
       }
     }
     

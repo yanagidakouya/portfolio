@@ -31,7 +31,6 @@ export default {
 <style lang="scss" scoped>
 @import '../../src/assets/sass/foundation/_mixin';
 nav{
-  padding: 10px 0;
   ul{
     display: flex;
     justify-content: space-around;
@@ -43,6 +42,7 @@ nav{
         display: inline-block;
         padding: 5px 10px;
         color: rgb(242, 242, 242);
+        font-size: clamp(10px, 2vw, 18px);
         &:hover{
           background: rgba(33, 33, 33, 0.8);
         }

@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .side-menubar{
   position: fixed;
   padding-top: 100px;

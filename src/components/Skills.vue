@@ -1,7 +1,6 @@
 <template>
   <div class="skills">
     <h3 class="section-title"><span class="neon-sb">2. </span>Skills</h3>
-    <div class="bg-color">
       <h4 class="test">Languages</h4>
       <ul class="items">
         <li class="item">
@@ -31,7 +30,7 @@
       </ul>
       <br><br><br>
       <h4>Frameworks / Others</h4>
-      <ul>
+      <ul class="items">
         <li class="item">
             <div class="item_img_box">
               <span><img class="item_img" src="../assets/img/sass.svg" alt=""></span>
@@ -57,7 +56,6 @@
               <p>html</p>
         </li>
       </ul>
-    </div>
   </div>
 </template>
 
@@ -89,17 +87,11 @@ export default {
 <style lang="scss" scoped>
 .skills{
   color: #fff;
-  .bg-color{
-    background-color: rgb(255, 255, 255, 0.4);
-    padding: 10% 40%;
-    margin: 5% calc(50% - 45vw) 0;
-    // margin: 5% calc(50% - 50vw) 0;
-  }
   ul{
     display: flex;
     align-content: stretch;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 20px 15%;
 
     li{
       width: 15%;

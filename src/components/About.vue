@@ -48,10 +48,13 @@ export default {
     table-layout: fixed;
     word-break: break-all;
     word-wrap: break-all;
+      @include mq-down(){
+        line-height: 200%;
+      }
     thead{
       tr{
         th{
-          font-size: 30px;
+          font-size: clamp(16px, 3vw, 30px);
         }
       }
     }

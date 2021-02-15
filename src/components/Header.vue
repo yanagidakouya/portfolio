@@ -28,6 +28,7 @@ export default {
   background: #000;
   width: 100%;
   position: fixed;
+  border-bottom: solid 1px rgb(100, 100, 100);
   .header-inner{
     width: 90%;
     margin: 0 auto;
