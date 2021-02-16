@@ -21,11 +21,15 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/sass/app.scss';
 .top{
   text-align: left;
   .vue-typer-outer{  
     .vue-typer-inner{
       padding: 20% 5% 20% 0;
+      @include mq-down(){
+        padding: 30% 5% 20% 0;
+      }
       h2{
         font-size: clamp(12px, 7.25vw, 80px);
         opacity: 0.9;

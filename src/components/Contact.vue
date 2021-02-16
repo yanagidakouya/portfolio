@@ -3,7 +3,7 @@
     <h3 class="section-title"><span class="neon-sb">5. </span>Contact</h3>
     <div class="contact_detail">
       <h4>Get In Touch</h4>
-      <p>質問がある方、気になった方こちらからどうぞ。</p>
+      <p>質問がある方、気になった方はこちらからどうぞ。</p>
       <p> ご連絡いつでもお待ちしております。</p>
       <a href="mailto:yanagidakouya@gmail.com" target="blank">Say Hello</a>
     </div>
@@ -22,7 +22,7 @@ export default {
   &_detail{
     padding: 5% 0;
     h4{
-      font-size: clamp(20px, 3vw, 80px);
+      font-size: clamp(20px, 3vw, 30px);
       border-bottom: 1px solid #c0f5fe;
       display: inline;
     }

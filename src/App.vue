@@ -81,6 +81,10 @@ a:visited{
   color: #1d9ecd;
 }
 
+p{
+  font-size: clamp(10px, 2vw, 26px);
+}
+
 .clear{
   clear: both;
 }
@@ -137,7 +141,7 @@ a:visited{
       margin: 0 calc(15% / 2);
       text-align: center;
       &-inner{
-        background: rgb(213, 234, 247, 0.15);
+        background: rgb(213, 234, 247, 0.13);
         margin: 0 calc(50% - 50vw);
         #top{
           width: 100%;
