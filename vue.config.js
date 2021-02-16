@@ -13,5 +13,6 @@ module.exports = {
       entry: "src/main.js",
       title: "Koya's Profile",
     }
-  }
+  },
+  publicPath: './'
 };

@@ -3,8 +3,7 @@
     <h3 class="section-title"><span class="neon-sb">1. </span>About</h3>
     <table>
       <thead>
-        <tr><th colspan="2">Profile</th>
-        </tr>
+        <tr><th colspan="2"><h4 class="h-four">Profile</h4></th></tr>
       </thead>
       <tbody>
         <tr>
@@ -51,13 +50,6 @@ export default {
       @include mq-down(){
         line-height: 200%;
       }
-    thead{
-      tr{
-        th{
-          font-size: clamp(16px, 3vw, 30px);
-        }
-      }
-    }
     tr{
       font-size: 20px;
       @include mq-down(){

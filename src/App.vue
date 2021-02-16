@@ -53,7 +53,31 @@ window.addEventListener('load', () => {
   let wh = window.innerHeight;
   let elem = document.getElementById('particles-js');
   elem.style.height = wh + 'px';
+
+
+  // *************************
+  let nodes = document.getElementsByClassName('work-box')
+  let height = 0
+  console.log('4');
+
+  for(var i = 0; i < nodes.length; i++) {
+    console.log('5');
+    if(height < nodes[i].getBoundingClientRect().height){
+      console.log('6');
+      height = nodes[i].getBoundingClientRect().height
+      console.log('7');
+    }
+  }
+  for(var x = 0; x < nodes.length; x++) {
+    console.log('8');
+    nodes[x].style.height = height
+  }
+  console.log('9');
+
+
 });
+
+
 </script>
 
 <style lang="scss">
@@ -100,6 +124,11 @@ p{
   text-shadow: 0 0 0.85rem #6cb8c6, 0 0 6ch #b7f0fa, 0 0 1ch #85e0f0, 0 0 0.85rem #71dcee;
   word-break: normal;
 }
+.h-four{
+  border-bottom: 1px solid #c0f5fe;
+  display: inline;
+  font-size: clamp(18px, 2.5vw, 28px);
+}
 
 .neon-sb{
   font-size: 0.85em;
@@ -116,11 +145,8 @@ p{
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   margin: 0 auto;
-  /* -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;  */
   .contents_container{
     position: relative;
     #particles-js{
@@ -136,8 +162,8 @@ p{
     .p-absolute{
       z-index: 90;
       position: absolute;
+      // 15% + 85% = 100%
       width: 85%;
-      // 15% + 15% + 70% = 100%
       margin: 0 calc(15% / 2);
       text-align: center;
       &-inner{
@@ -153,9 +179,7 @@ p{
           width: 100%;
         }
       }
-    }
-    
+    } 
   }
-
 }
 </style>

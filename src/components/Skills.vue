@@ -2,7 +2,7 @@
   <div class="skills">
     <h3 class="section-title"><span class="neon-sb">2. </span>Skills</h3>
     <div class="items">
-      <h4 class="test">Languages</h4>
+      <h4 class="h-four">Languages</h4>
       <ul>
         <li class="item">
             <div class="item_img_box">
@@ -33,7 +33,7 @@
       </ul>
     </div>
     <div class="items">
-      <h4>Frameworks / Others</h4>
+      <h4 class="h-four">Frameworks / Others</h4>
       <ul class="items">
         <li class="item">
             <div class="item_img_box">
@@ -43,7 +43,7 @@
         </li>
         <li class="item">
             <div class="item_img_box">
-              <span><img class="item_img" src="../assets/img/jquery.svg" alt=""></span>
+              <span><img class="item_img jquery" src="../assets/img/jquery.svg" alt=""></span>
             </div>
             <p>jQuery</p>
         </li>
@@ -94,11 +94,6 @@ export default {
   color: #fff;
   .items{
     padding: 2% 0;
-    h4{
-      font-size: clamp(18px, 2.5vw, 28px);
-      border-bottom: 1px solid #c0f5fe;
-      display: inline;
-    }
     ul{
       display: flex;
       align-content: stretch;
@@ -137,6 +132,9 @@ export default {
               }
             img{
               width: 100%;
+            }
+            .jquery{
+              background: rgb(255, 255, 255, 0.8);
             }
         }
       }
