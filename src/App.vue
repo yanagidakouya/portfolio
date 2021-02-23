@@ -53,28 +53,6 @@ window.addEventListener('load', () => {
   let wh = window.innerHeight;
   let elem = document.getElementById('particles-js');
   elem.style.height = wh + 'px';
-
-
-  // *************************
-  let nodes = document.getElementsByClassName('work-box')
-  let height = 0
-  console.log('4');
-
-  for(var i = 0; i < nodes.length; i++) {
-    console.log('5');
-    if(height < nodes[i].getBoundingClientRect().height){
-      console.log('6');
-      height = nodes[i].getBoundingClientRect().height
-      console.log('7');
-    }
-  }
-  for(var x = 0; x < nodes.length; x++) {
-    console.log('8');
-    nodes[x].style.height = height
-  }
-  console.log('9');
-
-
 });
 
 

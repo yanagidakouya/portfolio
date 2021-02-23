@@ -26,7 +26,7 @@
   text-align: left;
   .vue-typer-outer{  
     .vue-typer-inner{
-      padding: 20% 5% 20% 0;
+      padding: 20% 8% 20% 0;
       @include mq-down(){
         padding: 30% 5% 20% 0;
       }

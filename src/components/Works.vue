@@ -4,7 +4,7 @@
     <div class="work">
       <!-- ************* -->
       <div class="work-box">
-        <a nohref>
+        <a href="https://yoshiakikiki.com">
         <!-- <a href="https://yoshiakikiki.com"> -->
           <div class="work-img">
             <img src="../assets/img/yoshiaki.png" alt="コーポレートサイト">
@@ -44,24 +44,20 @@ export default {
 }
 window.addEventListener('load', () => {
 let nodes = document.getElementsByClassName('work-box')
-let height = 0
-console.log('4');
+let maxHeight = '0px'
 
 for(var i = 0; i < nodes.length; i++) {
-  console.log('5');
-  if(height < nodes[i].getBoundingClientRect().height){
-    console.log('6');
-    height = nodes[i].getBoundingClientRect().height
-    console.log('7');
+  let height = window.getComputedStyle(nodes[i]).height;
+  if(maxHeight < height){
+    maxHeight = height;
   }
 }
 for(var x = 0; x < nodes.length; x++) {
-  console.log('8');
-  nodes[x].style.height = height
-  console.log(nodes[x]);
+  // console.log('8');
+  nodes[x].style.height = maxHeight
 
 }
-console.log('9');
+// console.log('9');
 });
 </script>
 

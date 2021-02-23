@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header-inner">
       <div class="logo">
-        <h1><span class="neon-sb">K</span>oya's <span class="neon-sb">S</span>ite</h1>
+        <h1><span class="neon-sb"><span class="neon-sb">P</span>rofile</h1>
       </div>
       <div class="header-menu">
         <Nav></Nav>
