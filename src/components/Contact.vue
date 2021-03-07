@@ -31,6 +31,7 @@ export default {
       padding: 8px 15px;
       color: #c0f5fe;
       border: solid 1px #c0f5fe;
+      box-shadow: 3px 3px 3px rgba(192, 245, 254, 0.5);
       border-radius: 4px;
       margin-top: 40px;
       font-size: clamp(14px, 3vw, 20px);

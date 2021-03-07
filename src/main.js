@@ -18,6 +18,9 @@ Vue.use(VueTypePlugin)
 // smoooth-scroll
 import smoothScroll from 'vue-smoothscroll'
 Vue.use(smoothScroll)
+// wp読み込むためのaxios
+import axios from 'axios'
+Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
 

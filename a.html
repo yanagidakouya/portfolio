@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <div id="posts">
+    <div v-show="posts.length !== 0" class="posts">
+      <div class="posts-wrapper">
+        <article class="post" v-for="post in posts" :key="post.id">
+          <p class="post_img">
+            <span v-if="post.thumb" :style="{'background-image': 'url(' + post.thumb[0].source_url + ')'}" class="thumb">
+            </span>
+            <span v-else class="post_img_none">
+              no-image
+            </span>
+          </p>
+          <div class="post_contents-area">
+            <div v-if="post.category[0]" class="post_category-list">
+              <span v-for="category in post.category[0]" :key="category.id" class="post_category">
+                <a :href="category.link">{{ category.name }}</a>
+              </span>
+            </div>
+            <a :href="post.link" class="post_link">
+              <h3 class="post_title">{{ post.title }}</h3>
+              <div class="post_content sp-none" v-html="post.content">
+              </div>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  
+    <!-- 省略 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="/js/index.js"></script>
+  <script>
+    var app = new Vue({
+  el: "#posts",
+  data: {
+    posts: []
+  },
+  created: function () {
+    var _this = this;
+    axios.get("https://yanagidakouya.com/blog/wp-json/wp/v2/posts/?_embed").then(function(response) { // [domain]にはドメインを指定
+      response.data.forEach(function (elm) {
+        var data = {
+          title: elm.title.rendered,
+          content: elm.excerpt.rendered,
+          link: elm.link,
+          category: elm._embedded["wp:term"],
+          thumb: elm._embedded["wp:featuredmedia"]
+        }
+        _this.posts.push(data);
+      });
+    })
+      .catch(function (error) {
+        console.log("記事が取得できません。");
+      })
+  }
+});
+  </script>
+</body>
+</html>

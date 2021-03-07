@@ -11,7 +11,7 @@ module.exports = {
   pages: {
     index: {
       entry: "src/main.js",
-      title: "Koya's Profile",
+      title: "Profile",
     }
   },
   publicPath: './'

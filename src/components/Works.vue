@@ -1,6 +1,8 @@
 <template>
+  <!-- works -->
   <div class="works">
     <h3 class="section-title"><span class="neon-sb">3. </span>Works</h3>
+    <!-- work -->
     <div class="work">
       <!-- ************* -->
       <div class="work-box">
@@ -32,10 +34,45 @@
         </a>
       </div>
       <div class="clear"></div>
-      <!-- ************* -->
-
     </div>
+    <!-- /work -->
+
+    <!-- work -->
+    <div class="work">
+      <!-- ************* -->
+      <div class="work-box">
+        <a nohref>
+          <div class="work-img">
+            <img src="../assets/img/movie.png" alt="Portfolio Site">
+          </div>
+          <div class="work-detail">
+            <h4>動画配信プラットフォーム</h4>
+            <p>ID、パスワードによるログイン機能付き動画配信プラットフォームを開発しました。またIDまたはパスワードを忘れた方用の再発行とメール送信機能があります。動画はブライトコーブタグによる配信です。
+            </p>
+            <p>HTML, CSS, PHP(smarty)</p>
+          </div>
+        </a>
+      </div>
+      <!-- ************* -->
+      <div class="work-box">
+        <a href="https://nagano-kensetsukyoka-w.com/">
+          <div class="work-img">
+            <img src="../assets/img/naganokensetsu.png" alt="Portfolio Site">
+          </div>
+          <div class="work-detail">
+            <h4>長野建設業許可申請サポート</h4>
+            <p>長野県の行政事務所の申請ページを実装させていただきました。</p>
+            <p>Wordpressを用いた自作テンプレートです。</p><br>
+            <p>HTML, SCSS, Wordpress</p>
+          </div>
+        </a>
+      </div>
+      <div class="clear"></div>
+      <!-- ************* -->
+    </div>
+    <!-- /work -->
   </div>
+  <!-- works -->
 </template>
 
 <script>
@@ -71,6 +108,7 @@ for(var x = 0; x < nodes.length; x++) {
     width: 90%;
     &-box{
       border: solid 1px rgb(111, 111, 111);
+      box-shadow: 3px 3px 3px rgba(192, 245, 254, 0.5);
       box-sizing: border-box;
       border-radius: 10px;
       width: 45%;
